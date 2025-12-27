@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn62isub41yxs"]
+
+[ext_resource type="PackedScene" uid="uid://blr2honauujxm" path="res://UI/OrientationLock.tscn" id="1_glv2v"]
+
+[node name="Main" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OrientationLock" parent="CanvasLayer" instance=ExtResource("1_glv2v")]
+
+[node name="CurrentScene" type="Node" parent="."]
