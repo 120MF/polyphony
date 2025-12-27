@@ -8,7 +8,7 @@ extends Control
 
 func _ready() -> void:
 	setup_ui()
-	switch_btn.pressed.connect(func(): get_tree().change_scene_to_file("res://Scenes/CheckIn.tscn"))
+	switch_btn.pressed.connect(func(): SceneManager.change_scene("res://Scenes/CheckIn.tscn"))
 	dual_btn.pressed.connect(func(): print("Start Dual Core"))
 
 func setup_ui():

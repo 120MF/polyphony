@@ -3,7 +3,7 @@ extends Control
 @onready var list_content = $Margin/VBoxContainer/MemberList/ListContent
 @onready var name_input = $Margin/VBoxContainer/AddArea/NameInput
 @onready var color_picker = $Margin/VBoxContainer/AddArea/ColorPickerButton
-@onready var back_btn = $BG/BackBtn
+@onready var back_btn = $Margin/VBoxContainer/BackBtn
 @onready var add_btn = $Margin/VBoxContainer/AddBtn
 
 func _ready() -> void:
@@ -60,4 +60,4 @@ func _on_back_btn_pressed():
 	if Global.members.is_empty():
 		return
 	print("Hello!")
-	get_tree().change_scene_to_file("res://Scenes/CheckIn.tscn")
+	SceneManager.change_scene("res://Scenes/CheckIn.tscn")

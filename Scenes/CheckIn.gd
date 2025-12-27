@@ -6,7 +6,7 @@ extends Control
 func _ready():
 	# if there's no member, goto member setup page
 	if Global.members.is_empty():
-		get_tree().change_scene_to_file("res://UI/MemberSetup.tscn")
+		SceneManager.change_scene("res://UI/MemberSetup.tscn")
 		return
 
 	render_members()
@@ -30,7 +30,7 @@ func render_members():
 
 func _on_member_selected(index: int):
 	Global.set_active_member(index)
-	get_tree().change_scene_to_file("res://Scenes/Hub.tscn")
+	SceneManager.change_scene("res://Scenes/Hub.tscn")
 
 func _on_manage_clicked():
-	get_tree().change_scene_to_file("res://UI/MemberSetup.tscn")
+	SceneManager.change_scene("res://UI/MemberSetup.tscn")

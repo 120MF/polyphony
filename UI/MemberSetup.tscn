@@ -26,14 +26,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.23137255, 0.25882354, 0.32156864, 1)
 
-[node name="BackBtn" type="Button" parent="BG"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 1
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_p7ji5")
-text = "<"
-
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -49,6 +41,13 @@ theme_override_constants/margin_bottom = 200
 [node name="VBoxContainer" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
 theme_override_constants/separation = 20
+
+[node name="BackBtn" type="Button" parent="Margin/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_p7ji5")
+text = "<"
 
 [node name="Greeting" type="Label" parent="Margin/VBoxContainer"]
 layout_mode = 2
