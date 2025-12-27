@@ -1,39 +1,46 @@
 extends Node
 
 # {
-#   "id": "uuid_string", 
+#   "id": "unix_timestamp_random",
 #   "name": "Member Name",
-#   "color_hex": "#ff0000"
+#   "color": "html_hex_color", # e.g., "#ff0000"
+#   "created_at": 1234567890
 # }
 
 var members: Array = []
-var current_fronters: Array = []
+var current_member_index: int = -1
 
-# 存档路径
-const SAVE_PATH = "user://system_data.json"
+func get_current_member() -> Dictionary:
+	if current_member_index >= 0 and current_member_index < members.size():
+		return members[current_member_index]
+	return {} # 返回空字典表示无人/Unknown
+
+func set_active_member(index: int):
+	current_member_index = index
+	print("Active member switched to: ", index)
+
+const SAVE_PATH = "user://polyphony_data.save"
 
 func _ready():
 	load_data()
-	if members.is_empty():
-		add_member("Guest", Color.WHITE)
 
-func add_member(name: String, color: Color):
+func add_member(name: String, color: Color) -> void:
 	var new_member = {
-		"id": str(Time.get_unix_time_from_system()),
+		"id": Time.get_unix_time_from_system(),
 		"name": name,
-		"color_hex": color.to_html() # into string
+		"color": color.to_html(), # Color to Hex String
+		"created_at": Time.get_unix_time_from_system()
 	}
 	members.append(new_member)
 	save_data()
-	return new_member
 
-func update_member(index: int, new_name: String, new_color: Color):
+func update_member(index: int, new_name: String, new_color: Color) -> void:
 	if index >= 0 and index < members.size():
 		members[index]["name"] = new_name
-		members[index]["color_hex"] = new_color.to_html()
+		members[index]["color"] = new_color.to_html()
 		save_data()
 
-func remove_member(index: int):
+func delete_member(index: int) -> void:
 	if index >= 0 and index < members.size():
 		members.remove_at(index)
 		save_data()
@@ -41,24 +48,24 @@ func remove_member(index: int):
 func save_data():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
-		var json_str = JSON.stringify(members)
-		file.store_string(json_str)
-		file.close()
-		print("System data saved.")
+		var json_string = JSON.stringify(members)
+		file.store_string(json_string)
+		print("Data saved.")
 
 func load_data():
 	if not FileAccess.file_exists(SAVE_PATH):
-		return # no save
+		return # no data
 	
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-	var json_str = file.get_as_text()
-	var json = JSON.new()
-	var error = json.parse(json_str)
-	
-	if error == OK:
-		var data = json.data
-		if typeof(data) == TYPE_ARRAY:
-			members = data
-			print("System data loaded: ", members.size(), " members.")
-	else:
-		print("JSON Parse Error")
+	if file:
+		var json_string = file.get_as_text()
+		var json = JSON.new()
+		var parse_result = json.parse(json_string)
+		
+		if parse_result == OK:
+			var data = json.get_data()
+			if data is Array:
+				members = data
+				print("Data loaded: ", members.size(), " members.")
+		else:
+			print("JSON Parse Error: ", json.get_error_message())

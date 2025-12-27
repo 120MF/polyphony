@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://6cb8vt2yeh1w"]
+
+[ext_resource type="Script" uid="uid://bb6rbnofnmbsg" path="res://Scenes/CheckIn.gd" id="1_3gva2"]
+[ext_resource type="FontFile" uid="uid://3knmhwvbbguc" path="res://Assets/Fonts/AlibabaPuHuiTi-3-65-Medium.ttf" id="1_kxyjy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gva2"]
+font = ExtResource("1_kxyjy")
+font_size = 60
+font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.15686275)
+
+[node name="CheckIn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gva2")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23137255, 0.25882354, 0.32156864, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Title" type="Label" parent="BG/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "请选择前台成员"
+label_settings = SubResource("LabelSettings_3gva2")
+
+[node name="Grid" type="GridContainer" parent="BG/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ManageBtn" type="Button" parent="BG/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kxyjy")
+theme_override_font_sizes/font_size = 36
+text = "系统管理"

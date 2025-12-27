@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqbi2vp0syxj4"]
+
+[ext_resource type="FontFile" uid="uid://3knmhwvbbguc" path="res://Assets/Fonts/AlibabaPuHuiTi-3-65-Medium.ttf" id="1_11gwl"]
+[ext_resource type="Script" uid="uid://dpvkw16srcu4y" path="res://UI/MemberSetup.gd" id="1_p7ji5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7ji5"]
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_p7ji5"]
+font = ExtResource("1_11gwl")
+font_size = 60
+font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.15686275)
+
+[node name="MemberSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p7ji5")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23137255, 0.25882354, 0.32156864, 1)
+
+[node name="BackBtn" type="Button" parent="BG"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_p7ji5")
+text = "<"
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Greeting" type="Label" parent="Margin/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_11gwl")
+theme_override_font_sizes/font_size = 35
+text = "系统成员"
+label_settings = SubResource("LabelSettings_p7ji5")
+horizontal_alignment = 1
+
+[node name="MemberList" type="ScrollContainer" parent="Margin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ListContent" type="VBoxContainer" parent="Margin/VBoxContainer/MemberList"]
+layout_mode = 2
+
+[node name="AddArea" type="HBoxContainer" parent="Margin/VBoxContainer"]
+layout_mode = 2
+
+[node name="NameInput" type="LineEdit" parent="Margin/VBoxContainer/AddArea"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_11gwl")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "姓名..."
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="Margin/VBoxContainer/AddArea"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="AddBtn" type="Button" parent="Margin/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_11gwl")
+theme_override_font_sizes/font_size = 36
+text = "添加"
