@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://ctmne781cjq3w"]
 
-[ext_resource type="FontFile" uid="uid://3knmhwvbbguc" path="res://Assets/Fonts/AlibabaPuHuiTi-3-65-Medium.ttf" id="1_hpadu"]
+[ext_resource type="FontFile" uid="uid://dd7k8060dydlc" path="res://Assets/Fonts/ChironGoRoundTC-Medium.woff2" id="1_hpadu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpadu"]
 content_margin_left = 20.0
