@@ -1,14 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3vg1l0i8aqcn"]
+[gd_scene load_steps=2 format=3 uid="uid://c3vg1l0i8aqcn"]
 
 [ext_resource type="Script" uid="uid://c60xhj5pwa6i6" path="res://Scenes/Hub.gd" id="1_g703s"]
-[ext_resource type="FontFile" uid="uid://3knmhwvbbguc" path="res://Assets/Fonts/AlibabaPuHuiTi-3-65-Medium.ttf" id="1_ye28g"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ye28g"]
-font = ExtResource("1_ye28g")
-font_size = 60
-font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
-shadow_size = 7
-shadow_color = Color(0, 0, 0, 0.15686275)
 
 [node name="Hub" type="Control"]
 layout_mode = 3
@@ -50,15 +42,10 @@ alignment = 1
 
 [node name="Greeting" type="Label" parent="SafeArea/VBoxContainer/Header"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ye28g")
-theme_override_font_sizes/font_size = 35
 text = "你好，[Name]"
-label_settings = SubResource("LabelSettings_ye28g")
 
 [node name="SwitchBtn" type="Button" parent="SafeArea/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ye28g")
-theme_override_font_sizes/font_size = 36
 text = "切换成员"
 
 [node name="Space" type="Control" parent="SafeArea/VBoxContainer"]
@@ -71,6 +58,4 @@ theme_override_constants/separation = 20
 
 [node name="BtnDual" type="Button" parent="SafeArea/VBoxContainer/GameList"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ye28g")
-theme_override_font_sizes/font_size = 36
 text = "双核视界"

@@ -25,6 +25,17 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom="uid://ctmne781cjq3w"
+
+[internationalization]
+
+locale/translation_remaps={
+"res://translations.en.translation": PackedStringArray(),
+"res://translations.zh.translation": PackedStringArray()
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

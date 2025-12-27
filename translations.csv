@@ -1,0 +1,9 @@
+keys,en,zh
+app_name,Polyphony,Polyphony
+btn_add,Add,添加
+btn_back,Back,返回
+btn_switch,Switch,切换
+lbl_welcome,"Welcome, %s","欢迎，%s"
+lbl_who_fronting,Who is fronting?,当前谁在前台？
+lbl_system_members,System Members,系统成员列表
+placeholder_name,Name...,输入名字...
