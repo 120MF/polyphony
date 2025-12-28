@@ -320,6 +320,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_o3ceb"]
 color = Color(1, 1, 1, 1)
+thickness = 2
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p1gg7"]
 
@@ -766,6 +767,7 @@ HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_s6yos")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_8tl02")
 HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_x8ain")
 HScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_6dcld")
+HSeparator/constants/separation = 10
 HSeparator/styles/separator = SubResource("StyleBoxLine_o3ceb")
 HSlider/icons/grabber = SubResource("CompressedTexture2D_p1gg7")
 HSlider/icons/grabber_disabled = SubResource("CompressedTexture2D_t7st7")

@@ -1,5 +1,7 @@
 extends Node
 
+var system_name: String = ""
+
 # {
 #   "id": "unix_timestamp_random",
 #   "name": "Member Name",

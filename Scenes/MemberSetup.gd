@@ -1,17 +1,20 @@
 extends Control
 
-@onready var list_content = $Margin/VBoxContainer/MemberList/ListContent
-@onready var name_input = $Margin/VBoxContainer/AddArea/NameInput
-@onready var color_picker = $Margin/VBoxContainer/AddArea/ColorPickerButton
-@onready var back_btn = $Margin/VBoxContainer/BackBtn
-@onready var add_btn = $Margin/VBoxContainer/AddBtn
+@onready var list_content = $Margin/Panel/PanelMargin/VBoxContainer/MemberList/ListContent
+@onready var system_name_input = %SystemNameInput
+@onready var member_name_input = %MemberNameInput
+@onready var color_picker = $Margin/Panel/PanelMargin/VBoxContainer/AddArea/ColorPickerButton
+@onready var finish_btn = $Margin/Panel/PanelMargin/VBoxContainer/FinishBtn
+@onready var add_btn = $Margin/Panel/PanelMargin/VBoxContainer/AddBtn
+
+var BASE_STYLE: StyleBoxFlat = preload("res://UI/CommonStyleBoxes/DefaultPanel/glassmorphism_default_panel_alpha_40.tres")
 
 func _ready() -> void:
 	color_picker.color = Color(randf(), randf(), randf())
 	refresh_list()
 	
 	add_btn.pressed.connect(_on_add_btn_pressed)
-	back_btn.pressed.connect(_on_back_btn_pressed)
+	finish_btn.pressed.connect(_on_finish_btn_pressed)
 
 func refresh_list():
 	for child in list_content.get_children():
@@ -19,17 +22,21 @@ func refresh_list():
 	for i in range(Global.members.size()):
 		var member = Global.members[i]
 		create_list_item(i, member)
-		
+	if Global.members.is_empty():
+		finish_btn.disabled = true
+	else:
+		finish_btn.disabled = false
+
 func create_list_item(index: int, data: Dictionary):
 	var card = PanelContainer.new()
 	card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	card.custom_minimum_size.y = 100
 	
-	var style: StyleBoxFlat = preload("res://UI/CommonStyleBoxes/DefaultPanel/glassmorphism_default_panel_alpha_40.tres")
+	var style = BASE_STYLE.duplicate()
 	var base_color = Color(data["color"])
 	
-	style.bg_color = base_color.lightened(0.2)
-	style.bg_color.a = 0.10
+	style.bg_color = base_color.lightened(0.3)
+	style.bg_color.a = 0.4
 	card.add_theme_stylebox_override("panel" ,style)
 	
 	var item_box = HBoxContainer.new()
@@ -49,12 +56,13 @@ func create_list_item(index: int, data: Dictionary):
 	
 	# 4. 右侧：删除按钮 (Button)
 	var del_btn = Button.new()
+	del_btn.flat = true
 	del_btn.text = "X" # 或者用 "Remove"
 	# 稍微把按钮做方一点
 	del_btn.custom_minimum_size = Vector2(side_width, side_width)
 	del_btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	
-	del_btn.modulate = Color(1, 0.4, 0.4) 
+	del_btn.modulate = Color(0.6, 0.6, 0.6) 
 	
 	del_btn.pressed.connect(func(): _on_delete_pressed(index))
 	
@@ -70,7 +78,7 @@ func create_list_item(index: int, data: Dictionary):
 	
 	
 func _on_add_btn_pressed():
-	var _name = name_input.text.strip_edges()
+	var _name = member_name_input.text.strip_edges()
 	if _name == "":
 		return
 	
@@ -78,7 +86,7 @@ func _on_add_btn_pressed():
 	
 	Global.add_member(_name, color)
 	
-	name_input.text = ""
+	member_name_input.text = ""
 	# random a new color
 	color_picker.color = Color(randf(), randf(), randf())
 	refresh_list()
@@ -87,8 +95,6 @@ func _on_delete_pressed(index: int):
 	Global.delete_member(index)
 	refresh_list()
 	
-func _on_back_btn_pressed():
-	if Global.members.is_empty():
-		return
-	print("Hello!")
+func _on_finish_btn_pressed():
+	Global.system_name = system_name_input.text.strip_edges()
 	SceneManager.change_scene("res://Scenes/CheckIn.tscn")
