@@ -7,6 +7,7 @@ extends Control
 @onready var add_btn = $Margin/VBoxContainer/AddBtn
 
 func _ready() -> void:
+	color_picker.color = Color(randf(), randf(), randf())
 	refresh_list()
 	
 	add_btn.pressed.connect(_on_add_btn_pressed)
@@ -20,23 +21,53 @@ func refresh_list():
 		create_list_item(i, member)
 		
 func create_list_item(index: int, data: Dictionary):
-	var item_box = HBoxContainer.new()
+	var card = PanelContainer.new()
+	card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	card.custom_minimum_size.y = 100
 	
-	var color_rect = ColorRect.new()
-	color_rect.custom_minimum_size = Vector2(20, 40)
-	color_rect.color = Color(data["color"])
+	var style: StyleBoxFlat = preload("res://UI/CommonStyleBoxes/DefaultPanel/glassmorphism_default_panel_alpha_40.tres")
+	var base_color = Color(data["color"])
+	
+	style.bg_color = base_color.lightened(0.2)
+	style.bg_color.a = 0.10
+	card.add_theme_stylebox_override("panel" ,style)
+	
+	var item_box = HBoxContainer.new()
+	item_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	item_box.custom_minimum_size.y = 100
+	
+	var side_width = 90.0
+	var left_wrapper = CenterContainer.new()
+	left_wrapper.custom_minimum_size.x = side_width
 	
 	var name_label = Label.new()
 	name_label.text = data["name"]
-	name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL # 撑开空间
+
+	name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER 
 	
+	# 4. 右侧：删除按钮 (Button)
 	var del_btn = Button.new()
-	del_btn.text = "X"
+	del_btn.text = "X" # 或者用 "Remove"
+	# 稍微把按钮做方一点
+	del_btn.custom_minimum_size = Vector2(side_width, side_width)
+	del_btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	
+	del_btn.modulate = Color(1, 0.4, 0.4) 
+	
 	del_btn.pressed.connect(func(): _on_delete_pressed(index))
-	item_box.add_child(color_rect)
+	
+	# 5. 组装
+	item_box.add_child(left_wrapper)
 	item_box.add_child(name_label)
 	item_box.add_child(del_btn)
-	list_content.add_child(item_box)
+	
+	card.add_child(item_box)
+	
+	# 6. 添加到列表容器
+	list_content.add_child(card)
+	
 	
 func _on_add_btn_pressed():
 	var _name = name_input.text.strip_edges()

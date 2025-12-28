@@ -20,9 +20,9 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gu66b"]
 content_margin_left = 10.0
-content_margin_top = 6.0
+content_margin_top = 16.0
 content_margin_right = 10.0
-content_margin_bottom = 6.0
+content_margin_bottom = 16.0
 bg_color = Color(1, 1, 1, 0.156863)
 border_width_left = 1
 border_width_top = 1
@@ -37,15 +37,15 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbi0v"]
 content_margin_left = 10.0
-content_margin_top = 6.0
+content_margin_top = 16.0
 content_margin_right = 10.0
-content_margin_bottom = 6.0
+content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go0d8"]
 content_margin_left = 10.0
-content_margin_top = 6.0
+content_margin_top = 16.0
 content_margin_right = 10.0
-content_margin_bottom = 6.0
+content_margin_bottom = 16.0
 bg_color = Color(1, 1, 1, 0.156863)
 border_width_left = 1
 border_width_top = 1
@@ -60,9 +60,9 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_add5t"]
 content_margin_left = 10.0
-content_margin_top = 6.0
+content_margin_top = 16.0
 content_margin_right = 10.0
-content_margin_bottom = 6.0
+content_margin_bottom = 16.0
 bg_color = Color(1, 1, 1, 0.333333)
 border_width_left = 1
 border_width_top = 1
@@ -77,9 +77,9 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbmq6"]
 content_margin_left = 10.0
-content_margin_top = 6.0
+content_margin_top = 16.0
 content_margin_right = 10.0
-content_margin_bottom = 6.0
+content_margin_bottom = 16.0
 bg_color = Color(1, 1, 1, 0.54902)
 border_width_left = 1
 border_width_top = 1
@@ -93,10 +93,8 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0leqa"]
-load_path = "res://.godot/imported/check-square-fill.svg-147385e10b5f1ded62a42d0a41997232.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_terx5"]
-load_path = "res://.godot/imported/square-bold.svg-d6ec47cb18eb7929bc708d3d95814d89.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmokg"]
 content_margin_right = 10.0
@@ -171,16 +169,12 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xnve"]
-load_path = "res://.godot/imported/toggle-right-fill.svg-92afb9f0c85604b5a45fa7c72eeb47d2.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrl2w"]
-load_path = "res://.godot/imported/toggle-right-fill-disabled.svg-edd545300f39f5efcf31f78f80ad05d4.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yjru1"]
-load_path = "res://.godot/imported/toggle-left.svg-c841d46c5287f268eb76c97c2317b3cd.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j7a1e"]
-load_path = "res://.godot/imported/toggle-left-disabled.svg-2386e2fc95b2c790c2ac781834bc2aba.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ujlm"]
 content_margin_left = 10.0
@@ -328,16 +322,12 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 color = Color(1, 1, 1, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p1gg7"]
-load_path = "res://.godot/imported/dot-bold.svg-c61cf0f2e6178e8fadf5d284ac96cbcd.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t7st7"]
-load_path = "res://.godot/imported/dot-bold-disabled.svg-b8b717b0023280947b3458933aae88f4.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooprk"]
-load_path = "res://.godot/imported/dot-bold-highlight.svg-32636992935a9a9eb508d3a65f56a1a1.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qd5bb"]
-load_path = "res://.godot/imported/line-vertical.svg-2d549e89cbd97fa9f58dd02de97ce68d.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2u0r"]
 atlas = SubResource("CompressedTexture2D_qd5bb")
@@ -371,18 +361,16 @@ corner_radius_bottom_right = 80
 corner_radius_bottom_left = 80
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kkcbx"]
-load_path = "res://.godot/imported/line-vertical-longer-hsplit_container.svg-7e867b84cde6543738b31c8701262be7.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nuvnt"]
-load_path = "res://.godot/imported/x-bold.svg-d00dab1474d1d24e34dce2f6d5d3e5ff.ctex"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_byeq7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbd7q"]
 content_margin_left = 10.0
-content_margin_top = 2.0
+content_margin_top = 16.0
 content_margin_right = 10.0
-content_margin_bottom = 2.0
+content_margin_bottom = 16.0
 bg_color = Color(1, 1, 1, 0.156863)
 border_width_left = 2
 border_width_top = 2
@@ -412,7 +400,6 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p2gj8"]
-load_path = "res://.godot/imported/caret-down-bold.svg-19bc852e2fc77986ad5196716d074c40.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvgrq"]
 content_margin_left = 8.0
@@ -451,16 +438,12 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dnog8"]
-load_path = "res://.godot/imported/check-square-fill.svg-147385e10b5f1ded62a42d0a41997232.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7wscd"]
-load_path = "res://.godot/imported/radio-button-fill.svg-5e9c8ff74eae127ef7fa3cb477d045e5.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lo343"]
-load_path = "res://.godot/imported/circle-fill.svg-11658209f763b081b3ccaaf3e0934d22.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8shlv"]
-load_path = "res://.godot/imported/square-bold.svg-d6ec47cb18eb7929bc708d3d95814d89.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pukxb"]
 content_margin_left = 15.0
@@ -519,49 +502,34 @@ corner_radius_bottom_left = 8
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5k4dk"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7d4hs"]
-load_path = "res://.godot/imported/caret-down-bold_spinbox-normal.svg-d9e5eb8271d642b9920563c3e0c84e76.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sssy5"]
-load_path = "res://.godot/imported/caret-down-bold_spinbox-disabled.svg-1c81fef5c9bb6018c3ffbcdd78f4fec3.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5o6de"]
-load_path = "res://.godot/imported/caret-down-bold_spinbox-hovered.svg-69c8a8e539fc737fbefc2a5a48f251f3.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hvpaq"]
-load_path = "res://.godot/imported/caret-down-bold_spinbox-pressed.svg-e8416859b412e1eb48994f72932493c7.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_017tk"]
-load_path = "res://.godot/imported/caret-up-bold_spinbox_normal.svg-1e45a367852885f4e51c2d0b397c3603.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k7ld4"]
-load_path = "res://.godot/imported/caret-up-bold-spinbox-disabled.svg-aee5b0919a2a973d331c477419359ee7.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_io1wf"]
-load_path = "res://.godot/imported/caret-up-bold-spinbox-hovered.svg-b75b6b8edc8b70acb0913b6e5b2c1782.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t35ie"]
-load_path = "res://.godot/imported/caret-up-bold-spinbox-pressed.svg-04a3ad6f1d740dec008b99e31a5166f0.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uha20"]
-load_path = "res://.godot/imported/caret-circle-left-bold.svg-cca60f225407aadc676c454879daccde.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oq0ht"]
-load_path = "res://.godot/imported/caret-circle-left-bold-highlight.svg-2afc9d6502b21fb4f85ef60bb4f62aba.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86t0y"]
-load_path = "res://.godot/imported/line-vertical.svg-2d549e89cbd97fa9f58dd02de97ce68d.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qnfyv"]
-load_path = "res://.godot/imported/caret-circle-right-bold.svg-5040d6590dc01b1f00fea412a2575f95.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_80t5e"]
-load_path = "res://.godot/imported/caret-circle-right-bold-highlight.svg-ea6c1a044bcb32eea0d90b5b7c6fd91f.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tog84"]
-load_path = "res://.godot/imported/dots-three-vertical-bold.svg-fc857cae5024d62d296a5aab37604a22.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yfya5"]
-load_path = "res://.godot/imported/dots-three-vertical-bold-highlight.svg-c2491defe5c7986312c2b3a9f870a200.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py4ps"]
 bg_color = Color(1, 1, 1, 0.333333)
@@ -597,10 +565,8 @@ content_margin_left = 9.0
 bg_color = Color(1, 1, 1, 0.164706)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ynttp"]
-load_path = "res://.godot/imported/dot-bold-small.svg-76132991e973d5d7397da53bd9c684e5.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0hdt"]
-load_path = "res://.godot/imported/caret-line-right.svg-ad8c8fc81f8c29422efdc076f81cb5a5.ctex"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0v08"]
 
@@ -636,22 +602,16 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lq0xr"]
-load_path = "res://.godot/imported/caret-down-bold_spinbox-hovered.svg-69c8a8e539fc737fbefc2a5a48f251f3.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_py52d"]
-load_path = "res://.godot/imported/caret-right-bold.svg-e52b0783529ef51bf5f3fb20a36a95be.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ptmo"]
-load_path = "res://.godot/imported/check-square-fill.svg-147385e10b5f1ded62a42d0a41997232.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rpg4p"]
-load_path = "res://.godot/imported/caret-down-bold_spinbox-hovered.svg-69c8a8e539fc737fbefc2a5a48f251f3.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lh0m4"]
-load_path = "res://.godot/imported/square-bold.svg-d6ec47cb18eb7929bc708d3d95814d89.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_45bqn"]
-load_path = "res://.godot/imported/caret-up-down-bold.svg-7b5a46f942b022a633f951595b83c11b.ctex"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bghs"]
 
@@ -729,16 +689,12 @@ color = Color(1, 1, 1, 1)
 vertical = true
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0q1lg"]
-load_path = "res://.godot/imported/dot-bold.svg-c61cf0f2e6178e8fadf5d284ac96cbcd.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3qy2k"]
-load_path = "res://.godot/imported/dot-bold-disabled.svg-b8b717b0023280947b3458933aae88f4.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2x6m1"]
-load_path = "res://.godot/imported/dot-bold-highlight.svg-32636992935a9a9eb508d3a65f56a1a1.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yoif0"]
-load_path = "res://.godot/imported/line-horizontal.svg-c3a09046c6382dac46710c8ed71b256f.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsc50"]
 content_margin_top = 6.0
@@ -768,11 +724,10 @@ corner_radius_bottom_right = 80
 corner_radius_bottom_left = 80
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cyexq"]
-load_path = "res://.godot/imported/line-horizontal-longer-vsplit_container.svg-f0e0680ce0b23fed5799787df54a6a3a.ctex"
 
 [resource]
 default_font = ExtResource("1_tplk0")
-default_font_size = 30
+default_font_size = 50
 AcceptDialog/styles/panel = SubResource("StyleBoxFlat_t6iyv")
 BoxContainer/constants/separation = 20
 Button/colors/font_color = Color(1, 1, 1, 1)
@@ -822,6 +777,7 @@ HSlider/styles/slider = SubResource("StyleBoxFlat_7qmeq")
 HSplitContainer/constants/autohide = 0
 HSplitContainer/icons/grabber = SubResource("CompressedTexture2D_kkcbx")
 Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 76
 LineEdit/colors/clear_button_color = Color(1, 1, 1, 0.666667)
 LineEdit/colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 LineEdit/colors/font_color = Color(1, 1, 1, 1)
