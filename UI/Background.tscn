@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://jq18hg1a2tj5"]
+
+[ext_resource type="Shader" uid="uid://bpfln7l7q2h1f" path="res://UI/Background.gdshader" id="1_f8dcw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nko78"]
+shader = ExtResource("1_f8dcw")
+shader_parameter/color_top = Color(0.1, 0.1, 0.2, 1)
+shader_parameter/color_bottom = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/speed = 0.1
+
+[node name="Background" type="ColorRect"]
+material = SubResource("ShaderMaterial_nko78")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

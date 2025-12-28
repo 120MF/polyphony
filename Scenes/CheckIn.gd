@@ -1,12 +1,12 @@
 extends Control
 
-@onready var grid = $BG/CenterContainer/VBoxContainer/Grid
-@onready var manage_btn = $BG/CenterContainer/VBoxContainer/ManageBtn
+@onready var grid = $CenterContainer/VBoxContainer/Grid
+@onready var manage_btn = $CenterContainer/VBoxContainer/ManageBtn
 
 func _ready():
 	# if there's no member, goto member setup page
 	if Global.members.is_empty():
-		SceneManager.change_scene("res://UI/MemberSetup.tscn")
+		SceneManager.change_scene("res://Scenes/MemberSetup.tscn")
 		return
 
 	render_members()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqbi2vp0syxj4"]
 
-[ext_resource type="Script" uid="uid://dpvkw16srcu4y" path="res://UI/MemberSetup.gd" id="1_p7ji5"]
+[ext_resource type="Script" uid="uid://dpvkw16srcu4y" path="res://Scenes/MemberSetup.gd" id="1_p7ji5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7ji5"]
 corner_radius_top_left = 50

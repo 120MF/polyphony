@@ -28,7 +28,7 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
-theme/custom="uid://ctmne781cjq3w"
+theme/custom="uid://dr4hm86sugbmt"
 
 [internationalization]
 
@@ -41,3 +41,4 @@ locale/translation_remaps={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+viewport/hdr_2d=true
