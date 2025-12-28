@@ -20,7 +20,9 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gu66b"]
 content_margin_left = 10.0
+content_margin_top = 6.0
 content_margin_right = 10.0
+content_margin_bottom = 6.0
 bg_color = Color(1, 1, 1, 0.156863)
 border_width_left = 1
 border_width_top = 1
@@ -34,10 +36,16 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbi0v"]
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go0d8"]
 content_margin_left = 10.0
+content_margin_top = 6.0
 content_margin_right = 10.0
+content_margin_bottom = 6.0
 bg_color = Color(1, 1, 1, 0.156863)
 border_width_left = 1
 border_width_top = 1
@@ -52,7 +60,9 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_add5t"]
 content_margin_left = 10.0
+content_margin_top = 6.0
 content_margin_right = 10.0
+content_margin_bottom = 6.0
 bg_color = Color(1, 1, 1, 0.333333)
 border_width_left = 1
 border_width_top = 1
@@ -67,7 +77,9 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbmq6"]
 content_margin_left = 10.0
+content_margin_top = 6.0
 content_margin_right = 10.0
+content_margin_bottom = 6.0
 bg_color = Color(1, 1, 1, 0.54902)
 border_width_left = 1
 border_width_top = 1
@@ -809,6 +821,7 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_8yuj4")
 HSlider/styles/slider = SubResource("StyleBoxFlat_7qmeq")
 HSplitContainer/constants/autohide = 0
 HSplitContainer/icons/grabber = SubResource("CompressedTexture2D_kkcbx")
+Label/colors/font_color = Color(1, 1, 1, 1)
 LineEdit/colors/clear_button_color = Color(1, 1, 1, 0.666667)
 LineEdit/colors/clear_button_color_pressed = Color(1, 1, 1, 1)
 LineEdit/colors/font_color = Color(1, 1, 1, 1)

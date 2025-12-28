@@ -33,4 +33,4 @@ func _on_member_selected(index: int):
 	SceneManager.change_scene("res://Scenes/Hub.tscn")
 
 func _on_manage_clicked():
-	SceneManager.change_scene("res://UI/MemberSetup.tscn")
+	SceneManager.change_scene("res://Scenes/MemberSetup.tscn")

@@ -16,7 +16,7 @@ func _ready():
 		transition_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		
 		# 启动时加载第一个场景 (Splash)
-		change_scene("res://Scenes/CheckIn.tscn", false) # false = 不用淡入动画
+		change_scene("res://Scenes/Splash.tscn", false)
 
 func change_scene(scene_path: String, use_transition: bool = true):
 	if not scene_container:
