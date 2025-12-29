@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3yb82hskwuuu"]
+
+[ext_resource type="StyleBox" uid="uid://vcho11k71yer" path="res://UI/CommonStyleBoxes/DefaultPanel/glassmorphism_default_panel_alpha_40.tres" id="1_7rb3n"]
+[ext_resource type="Script" uid="uid://cghxvl3hi8ahw" path="res://UI/Components/GameCard.gd" id="2_13j0b"]
+
+[node name="GameCard" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.5
+offset_top = -411.0
+offset_right = 301.5
+offset_bottom = 459.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("1_7rb3n")
+script = ExtResource("2_13j0b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 50
+
+[node name="CoverImage" type="TextureRect" parent="VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "GameName"
+
+[node name="Meta" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "1-2Players"
+
+[node name="Desc" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Description"
+autowrap_mode = 2

@@ -8,9 +8,9 @@ func _ready() -> void:
 	
 	enter_btn.pressed.connect(func(): 
 		if Global.members.is_empty():
-			SceneManager.change_scene("res://Scenes/MemberSetup.tscn")
+			SceneManager.change_scene("res://Scenes/SystemSetup.tscn")
 		else:
-			SceneManager.change_scene("res://Scenes/CheckIn.tscn")
+			SceneManager.change_scene("res://Scenes/Hub.tscn")
 	)
 
 

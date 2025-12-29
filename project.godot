@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://_System/Global.gd"
 SceneManager="*res://_System/SceneManager.gd"
+GameData="*res://_System/GameData.gd"
 
 [display]
 

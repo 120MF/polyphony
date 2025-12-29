@@ -97,4 +97,4 @@ func _on_delete_pressed(index: int):
 	
 func _on_finish_btn_pressed():
 	Global.system_name = system_name_input.text.strip_edges()
-	SceneManager.change_scene("res://Scenes/CheckIn.tscn")
+	SceneManager.change_scene("res://Scenes/Hub.tscn")
