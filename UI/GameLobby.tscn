@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://etlqkdvelhq5"]
+
+[ext_resource type="Script" uid="uid://bq7hklhnvsm64" path="res://UI/GameLobby.gd" id="1_88vo2"]
+[ext_resource type="Shader" uid="uid://brmoy6ynor4ip" path="res://UI/Shaders/blur.gdshader" id="1_t4u0g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_88vo2"]
+shader = ExtResource("1_t4u0g")
+shader_parameter/strength = 3.3
+shader_parameter/mix_percentage = 0.0
+shader_parameter/base_alpha = 1.0
+
+[node name="GameLobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_88vo2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_88vo2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin1" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect/Margin1"]
+layout_mode = 2
+
+[node name="Margin2" type="MarginContainer" parent="ColorRect/Margin1/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Margin1/PanelContainer/Margin2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Game Title"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Desc" type="Label" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "desc"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+layout_mode = 2
+
+[node name="SelectMember" type="Label" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+layout_mode = 2
+text = "选择游玩成员"
+horizontal_alignment = 1
+
+[node name="SlotContainer" type="VBoxContainer" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StartBtn" type="Button" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "开始"
+
+[node name="CancelBtn" type="Button" parent="ColorRect/Margin1/PanelContainer/Margin2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "取消"

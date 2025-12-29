@@ -5,6 +5,7 @@ extends Control
 @onready var system_btn = $SafeArea/VBoxContainer/SystemBtn
 @onready var card_list = %CardList
 
+const LOBBY_SCENE = preload("res://UI/GameLobby.tscn")
 
 func _ready() -> void:
 	setup_header()
@@ -22,4 +23,11 @@ func setup_carousel():
 		var card = card_scene.instantiate()
 		card._ready()
 		card.setup(data) 
+		card.card_clicked.connect(_on_game_selected)
 		card_list.add_child(card)
+		
+
+func _on_game_selected(data):
+	var lobby = LOBBY_SCENE.instantiate()
+	add_child(lobby)
+	lobby.setup(data)

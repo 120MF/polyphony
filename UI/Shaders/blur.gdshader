@@ -10,7 +10,7 @@ uniform float strength : hint_range(0.1, 60.0) = 3.3;
 /**
 * How dark the blur will be
 */
-uniform float mix_percentage: hint_range(0.0, 1.0) = 0.0;
+uniform float mix_percentage: hint_range(0.0, 1.0) = 0.85;
 /**
 * Base transparency of the blur effect
 */
@@ -51,4 +51,5 @@ void fragment() {
 
     // Preserve transparency for proper blending
     COLOR = vec4(color, alpha);
+	COLOR.rgb *= 0.1;
 }
