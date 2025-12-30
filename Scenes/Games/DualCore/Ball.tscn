@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4iwvo1deu5je"]
+
+[ext_resource type="Script" uid="uid://crcwq7380b5c1" path="res://Scenes/Games/DualCore/Ball.gd" id="1_252q2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t8n6s"]
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_252q2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t8n6s")

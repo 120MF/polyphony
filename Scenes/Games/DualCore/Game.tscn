@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv1qoq5mros73"]
+
+[ext_resource type="PackedScene" uid="uid://jq18hg1a2tj5" path="res://UI/Background.tscn" id="1_gd0as"]
+
+[node name="Game" type="Node2D"]
+
+[node name="BGLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Background" parent="BGLayer" instance=ExtResource("1_gd0as")]
+z_index = -100
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+build_mode = 1
+polygon = PackedVector2Array(0, 0, 0, 2400, 0, 1200, 1080, 1200, 1080, 0, 1080, 2400)
