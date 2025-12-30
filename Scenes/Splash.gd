@@ -12,6 +12,12 @@ func _ready() -> void:
 		else:
 			SceneManager.change_scene("res://Scenes/Hub.tscn")
 	)
+	if Global.members.is_empty():
+		enter_btn.text = "初始化系统"
+		enter_btn.pressed.connect(func(): SceneManager.change_scene("res://Scenes/SystemSetup.tscn"))
+	else:
+		enter_btn.text = "进入游戏"
+		enter_btn.pressed.connect(func(): SceneManager.change_scene("res://Scenes/Hub.tscn"))
 
 
 func play_intro():

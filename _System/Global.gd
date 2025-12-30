@@ -21,15 +21,16 @@ func set_active_member(index: int):
 	current_member_index = index
 	print("Active member switched to: ", index)
 
-const SAVE_PATH = "user://polyphony_data.save"
+const SYSTEM_NAME_SAVE_PATH = "user://polyphony_system_name.save"
+const MEMBERS_SAVE_PATH = "user://polyphony_members.save"
 
 func _ready():
 	load_data()
 
-func add_member(name: String, color: Color) -> void:
+func add_member(_name: String, color: Color) -> void:
 	var new_member = {
 		"id": Time.get_unix_time_from_system(),
-		"name": name,
+		"name": _name,
 		"color": color.to_html(), # Color to Hex String
 		"created_at": Time.get_unix_time_from_system()
 	}
@@ -48,17 +49,19 @@ func delete_member(index: int) -> void:
 		save_data()
 
 func save_data():
-	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	var file = FileAccess.open(MEMBERS_SAVE_PATH, FileAccess.WRITE)
 	if file:
 		var json_string = JSON.stringify(members)
 		file.store_string(json_string)
-		print("Data saved.")
+	file = FileAccess.open(SYSTEM_NAME_SAVE_PATH, FileAccess.WRITE)
+	if file:
+		file.store_string(system_name)
 
 func load_data():
-	if not FileAccess.file_exists(SAVE_PATH):
+	if not FileAccess.file_exists(SYSTEM_NAME_SAVE_PATH) or not FileAccess.file_exists(MEMBERS_SAVE_PATH):
 		return # no data
 	
-	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var file = FileAccess.open(MEMBERS_SAVE_PATH, FileAccess.READ)
 	if file:
 		var json_string = file.get_as_text()
 		var json = JSON.new()
@@ -68,6 +71,6 @@ func load_data():
 			var data = json.get_data()
 			if data is Array:
 				members = data
-				print("Data loaded: ", members.size(), " members.")
-		else:
-			print("JSON Parse Error: ", json.get_error_message())
+	file = FileAccess.open(SYSTEM_NAME_SAVE_PATH, FileAccess.READ)
+	if file:
+		system_name = file.get_as_text()
