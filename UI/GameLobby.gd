@@ -19,7 +19,6 @@ func _ready() -> void:
 	modulate.a = 0.0
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 1.0, 0.2)
-	
 
 func setup(data):
 	current_game_data = data
@@ -27,6 +26,7 @@ func setup(data):
 	desc.text = data["desc"]
 	
 	create_slots(data.get("players", 1)) # default 1
+	validate_form()
 
 func create_slots(count: int):
 	# cleanup old data
@@ -42,7 +42,7 @@ func create_slots(count: int):
 		
 		var selector = OptionButton.new()
 		selector.size_flags_horizontal = Control.SIZE_EXPAND_FILL # 撑满宽度
-		
+		selector.item_selected.connect(_on_selection_changed)
 		# fill the queue
 		populate_selector(selector)
 		
@@ -54,14 +54,32 @@ func create_slots(count: int):
 		member_selectors.append(selector)
 
 func populate_selector(opt: OptionButton):
-	opt.add_item("Select Member...", -1) # default ID=-1
+	opt.add_item("选择成员...", -1) # default ID=-1
 	opt.set_item_disabled(0, true) # disable default item
 	
 	for i in range(Global.members.size()):
 		var m = Global.members[i]
-		# addItem(label, id)
-		# Global.members index as id
+		# add_item(label, id)
 		opt.add_item(m["name"], i)
+	opt.selected = 0
+		
+func _on_selection_changed(_index):
+	validate_form()
+
+func validate_form():
+	var selected_ids = []
+	var is_valid = true
+	
+	for opt in member_selectors:
+		var id = opt.get_selected_id()
+		if id == -1:
+			is_valid = false
+			break
+		if id in selected_ids:
+			is_valid = false
+			break
+		selected_ids.append(id)
+	start_btn.disabled = not is_valid
 
 func _on_start():
 	var selected_indices = []
