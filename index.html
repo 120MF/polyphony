@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, interactive-widget=overlays-content, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, interactive-widget=resizes-content, initial-scale=1.0">
 		<title>Polyphony</title>
 		<style>
 html, body, #canvas {
@@ -94,6 +94,7 @@ body {
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <link rel="manifest" href="index.manifest.json">
 
+<style>html,body{overflow:hidden;height:100%;width:100%;position:fixed;top:0;left:0;overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}</style>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -216,6 +217,7 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
+<script>window.addEventListener("scroll",function(){if(window.scrollY!==0)window.scrollTo(0,0);});</script>
 	</body>
 </html>
 
