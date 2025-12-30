@@ -36,6 +36,11 @@ jobs:
       - name: Add .nojekyll file
         run: touch build/web/.nojekyll
 
+      - name: Patch index.html for Mobile Input
+        run: |
+          sed -i 's|<head>|<head><style>html,body{overflow:hidden;margin:0;padding:0;height:100%;width:100%;} canvas{display:block;}</style>|g' build/web/index.html
+          sed -i 's/content=".*user-scalable=no"/content="width=device-width, user-scalable=no, interactive-widget=overlays-content"/g' build/web/index.html
+
       - name: Create CNAME file
         run: echo "polyphony.top" > build/web/CNAME
 

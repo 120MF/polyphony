@@ -12,7 +12,7 @@ var BASE_STYLE: StyleBoxFlat = preload("res://UI/CommonStyleBoxes/DefaultPanel/g
 func _ready() -> void:
 	color_picker.color = Color(randf(), randf(), randf())
 	refresh_list()
-	system_name_input = Global.system_name
+	system_name_input.text = Global.system_name
 	
 	add_btn.pressed.connect(_on_add_btn_pressed)
 	finish_btn.pressed.connect(_on_finish_btn_pressed)
